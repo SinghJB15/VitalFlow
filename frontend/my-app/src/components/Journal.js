@@ -7,12 +7,12 @@ import EditJournal from "../pages/JournalEdit";
 
 const Journal = (props) => {
     const navigate = useNavigate();
-    const URL = `${process.env.REACT_APP_BACKEND_URL}journal/`;
+    const URL = process.env.REACT_APP_BACKEND_URL;
     const [journals, setJournals] = useState(null);
     //Function to fetch journals
     const fetchJournals = async() => {
         try {
-            const response = await axios.get(URL, { withCredentials: true });
+            const response = await axios.get(URL + "journal", { withCredentials: true });
             setJournals(response.data.data);
       
         } catch(error) {
@@ -23,7 +23,7 @@ const Journal = (props) => {
     //Function to create journals
     const createJournal = async(journalData) => {
         try {
-            const response = await axios.post(URL + "new",  journalData, { withCredentials: true });
+            const response = await axios.post(URL + "journal/new",  journalData, { withCredentials: true });
 
             if(response.status === 200) {
                 navigate("/journals")
