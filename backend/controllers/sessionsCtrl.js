@@ -29,6 +29,7 @@ const session = async(req, res) => {
                     id: foundUser._id,
                     username: foundUser.username
                 }
+                console.log("session:", req.session);
                 return res.status(200).json({
                     message: "login Successful",
                     user: { id: foundUser._id, username: foundUser.username }
@@ -58,11 +59,12 @@ const verifySession = (req, res) => {
 
 //Delete session after user logs out
 const deleteSession = (req, res) => {
-    console.log("session:", req.session);
+    console.log("before logout session:", req.session);
     req.session.destroy((err) => {
         if(err) {
             return res.status(400).json({ message: "Error destroying the session" });
         }
+        console.log("Session destroyed successfully");
         //clear the session cookie from the users browser
         res.clearCookie('connect.sid');
         res.status(200).json({ message: "Session ended successfully"} )
