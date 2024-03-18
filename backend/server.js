@@ -9,7 +9,7 @@ const dataBase = require("./models/index")
 const routes = require("./routes/index.js")
 const MongoStore = require("connect-mongo")
 const corsOptions = {
-    origin: process.env.FRONTEND_URL,
+    origin: process.env.FRONTEND_URL + "/",
     credentials: true
 }
 //Middlewear
