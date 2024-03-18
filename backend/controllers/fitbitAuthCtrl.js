@@ -54,7 +54,7 @@ const handleFitbitRedirect = async(req, res) => {
         fitbitTokenExpiration: new Date(Date.now() + expires_in * 1000)
     }, {new: true})
 
-    res.redirect("http://localhost:3000/login");
+    res.redirect(`${process.env.FRONTEND_URL}login`);
 
    } catch(error) {
     console.error("Error exchanging authorization code:", error);
