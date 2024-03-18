@@ -4,11 +4,11 @@ const axios = require("axios");
 const Users = require("../models/Users");
 
 //Environment variables 
-const CLIENT_ID = process.env.FITBIT_CLIENT_ID;
-const CLIENT_SECRET = process.env.FITBIT_CLIENT_SECRET;
-const REDIRECT_URL = encodeURIComponent(process.env.FITBIT_CALLBACK_URL);
-const AUTHORIZATION_URL = process.env.FITBIT_AUTHORIZATION_URL;
-const TOKEN_URL = process.env.FITBIT_TOKEN_URL;
+const CLIENT_ID = process.env.RENDER_FITBIT_CLIENT_ID;
+const CLIENT_SECRET = process.env.RENDER_FITBIT_CLIENT_SECRET;
+const REDIRECT_URL = encodeURIComponent(process.env.RENDER_FITBIT_CALLBACK_URL);
+const AUTHORIZATION_URL = process.env.RENDER_FITBIT_AUTHORIZATION_URL;
+const TOKEN_URL = process.env.RENDER_FITBIT_TOKEN_URL;
 const SCOPES = encodeURIComponent("activity location respiratory_rate temperature cardio_fitness nutrition weight electrocardiogram oxygen_saturation sleep heartrate profile settings");
 
 //Function to generate the Fitbit authentication URL
