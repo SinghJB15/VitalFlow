@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 
 const FitbitAuthButton = () => {
-    const navigate = useNavigate()
     const URL = process.env.REACT_APP_BACKEND_URL;
 
     const getAuthUrlAndRedirect = async() => {
