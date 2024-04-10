@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
 import Profile from "../pages/fitbitProfile";
 import Device from "../pages/fitbitDevice";
 import Heartrate from "../pages/fitbitHeartrate";
