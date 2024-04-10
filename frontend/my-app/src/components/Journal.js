@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, Route, Routes } from 'react-router-dom';
+import { useNavigate, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import JournalIndex from "../pages/JournalIndex";
 import NewJournal from "../pages/JournalNew";

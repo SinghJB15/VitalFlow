@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import axios from "axios";
 import IndexPage from './pages/Index.js';
 import Sidebar from './components/Sidebar.js';
 import Main from "./components/Main.js";
